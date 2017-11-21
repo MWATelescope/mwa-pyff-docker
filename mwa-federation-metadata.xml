@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitiesDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="SCG20170630" Name="sphericalcowgroup.com" validUntil="2017-12-31T00:00:00Z" xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata sstc-saml-schema-metadata-2.0.xsd urn:mace:shibboleth:metadata:1.0 shibboleth-metadata-1.0.xsd http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd">
+<EntityDescriptor xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" entityID="https://registry.mwatelescope.org/shibboleth" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDQDCCAiigAwIBAgIJAN2gJmqEDVgrMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
+BAMTGXJlZ2lzdHJ5Lm13YXRlbGVzY29wZS5vcmcwHhcNMTcwOTA1MTgyODQ1WhcN
+MjcwOTAzMTgyODQ1WjAkMSIwIAYDVQQDExlyZWdpc3RyeS5td2F0ZWxlc2NvcGUu
+b3JnMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsNES/pX9/ecxUYMe
+sY7wq4oR8n7cNPCERDejOtbheFKoNNFx9IgxJ6VFQMi8mSRUFr1ZoHDxVCj5L0xl
+kMGes8nM1/fLynWehilDzrACOUxFY3m9pPTpmKOTE5j4Cu9abbj+VjxYWuMQfDwa
+U0K0KO+GJQgHXdaZCLcT5JN1nd25ZR/huzePn82tArzCskNpPwkUoHTdHEJJp9+9
+1id6uJ1UyZGv6Uk6yQ/aSiyDoKP0jKhu5XrLrTX3/dfBiMXjBbEri+z1JxMCJKXk
+cXCjcTzq3eC/v4wyEhkBYZ3ELdHdNmIW7atPWyRXVEQIIJSGCR/n8gYSE22TrYaA
+P3SocwIDAQABo3UwczBSBgNVHREESzBJghlyZWdpc3RyeS5td2F0ZWxlc2NvcGUu
+b3JnhixodHRwczovL3JlZ2lzdHJ5Lm13YXRlbGVzY29wZS5vcmcvc2hpYmJvbGV0
+aDAdBgNVHQ4EFgQUObrtkpWw0sPOw7X5WmHsAg5XsPYwDQYJKoZIhvcNAQEFBQAD
+ggEBAHsbXBnGJ363VZ41jRQ/XBOxDfbrUE34tgRmAuorlRRvR7rUPyvnRg5DRkjn
+FHO8hvCJb2s6oZ/IVllF5wFx6Ddlei6fEDT7AJ6Sm8IiPtdcpbzYB3/pJON+bOpj
+7cnQ8hNIQ1XNMNDmRYL0x6TM+hhdjjf1NGojrm4wqZc+SP8KQJmGRrXVvNucmxL6
+3r1gog+Qru88ivJZi3DZfJ38y5DRuNyY+idkEmLGHMQaLdUEnk0JygSkBJsevzmK
+zCTV0At+AHFLDSFyikTLHT8VVViGQcBnNaFRTne1gBxf1ZfUavdLyUus7Lm1J7RA
+C40W18MCcTRpUCK3mtHBwp95NOw=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://registry.mwatelescope.org/Shibboleth.sso/SAML2/POST" index="1"/>
+
+    </SPSSODescriptor>
+
+    <Organization>
+        <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
+        <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
+        <OrganizationURL xml:lang="en">http://mwatelescope.org</OrganizationURL>
+    </Organization>
+    <ContactPerson contactType="support">
+      <GivenName>Greg</GivenName>
+      <SurName>Sleap</SurName>
+      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+    </ContactPerson>
+    <ContactPerson contactType="technical">
+      <GivenName>Greg</GivenName>
+      <SurName>Sleap</SurName>
+      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+    </ContactPerson>
+    <ContactPerson contactType="other">
+      <GivenName>Greg</GivenName>
+      <SurName>Sleap</SurName>
+      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+    </ContactPerson>
+    <ContactPerson contactType="administrative">
+      <GivenName>Greg</GivenName>
+      <SurName>Sleap</SurName>
+      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+    </ContactPerson>
+</EntityDescriptor>
+</EntitiesDescriptor>

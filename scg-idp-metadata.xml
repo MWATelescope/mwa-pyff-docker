@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" entityID="https://login.sphericalcowgroup.com/idp/shibboleth">
+
+    <IDPSSODescriptor errorURL="https://login.sphericalcowgroup.com/support.html" protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">sphericalcowgroup.com</shibmd:Scope>
+            <mdui:UIInfo>
+                <mdui:DisplayName xml:lang="en">Spherical Cow Group</mdui:DisplayName>
+            </mdui:UIInfo>
+        </Extensions>
+
+        <KeyDescriptor use="signing">
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVAK8KAP3GQEdx3IE6dNEOpnh969f5MA0GCSqGSIb3DQEB
+BQUAMCYxJDAiBgNVBAMTG2xvZ2luLnNwaGVyaWNhbGNvd2dyb3VwLmNvbTAeFw0x
+NDAyMDMwMDM4MDFaFw0zNDAyMDMwMDM4MDFaMCYxJDAiBgNVBAMTG2xvZ2luLnNw
+aGVyaWNhbGNvd2dyb3VwLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAL92n6m9Bgz/JmPTUp9V6/z1DY0/3jhj0hbo9osEuOdRx2RgrsX1mZIHQE/p
+Hl+N+03UjY/2Q7xi+lWQaMaD9IUP6qgv+BSPzxUo+kuAGoVRZsHz43KBBkejTWXR
+o84hZerto9q7Id5Q3PDH6Ym2ouWRkALo6Sl1piIgOMeRQS/XFXQELdn+H5lKXtO+
+feBCbG6RXA3dWUpRiuJ6ZZCgpiYFzTvMrF8H/SIKmoxTIeJGw0JcQgu3ndsd3E9y
+mIiCs+yeJTp3d4poTGy8cdVScsT/mCHlLfIAhBOKKm6fZgAA3t/auE9vIHY0kYEl
+cWVo3bfAKfVUBj7MVIgTw7PHsvsCAwEAAaN9MHswWgYDVR0RBFMwUYIbbG9naW4u
+c3BoZXJpY2FsY293Z3JvdXAuY29thjJodHRwczovL2xvZ2luLnNwaGVyaWNhbGNv
+d2dyb3VwLmNvbS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUwhhsab9pgXvCN/L4
+DE5sRp9YkJYwDQYJKoZIhvcNAQEFBQADggEBABhkSGP5AYk6dk+FcYxnJeYJO4Hz
+OQfsEdoI2sPO5QvlNyEbrGdnFg60Az39FT/MOCXaxKXbSsES36ynNTGy3oU4YjVX
+ZisvWPdhhLwklFncjXzmuW/SyUEpi0rQ4WUwCRCd6ZIVD6OfT8bRrNjeWsXutKRn
+liv9PgqxJl18uHbbo8TVSH8vGUos+uk10jTmMnD7UWqIKpL9DRUpIMPIWe0bmKkv
+ggsBLNiGWwMu0rJxa3sp7oU6aPGKH7OqtdZuhdRvS2LmLbpN4Bu0ZXfpDe2TwDxr
+pN0QbIIm4O6jC0FHlcM65s1+NdkYUO+1FwmZp1+HHWcADe4fzoz0hutfDNI=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+        
+        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.sphericalcowgroup.com:8443/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>
+                                   
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://login.sphericalcowgroup.com/idp/profile/SAML2/POST/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://login.sphericalcowgroup.com/idp/profile/SAML2/POST-SimpleSign/SSO"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://login.sphericalcowgroup.com/idp/profile/SAML2/Redirect/SSO"/>
+    </IDPSSODescriptor>
+
+    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+
+        <Extensions>
+            <shibmd:Scope regexp="false">sphericalcowgroup.com</shibmd:Scope>
+        </Extensions>
+
+        <KeyDescriptor>
+            <ds:KeyInfo>
+                <ds:X509Data>
+                    <ds:X509Certificate>
+MIIDWDCCAkCgAwIBAgIVAK8KAP3GQEdx3IE6dNEOpnh969f5MA0GCSqGSIb3DQEB
+BQUAMCYxJDAiBgNVBAMTG2xvZ2luLnNwaGVyaWNhbGNvd2dyb3VwLmNvbTAeFw0x
+NDAyMDMwMDM4MDFaFw0zNDAyMDMwMDM4MDFaMCYxJDAiBgNVBAMTG2xvZ2luLnNw
+aGVyaWNhbGNvd2dyb3VwLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoC
+ggEBAL92n6m9Bgz/JmPTUp9V6/z1DY0/3jhj0hbo9osEuOdRx2RgrsX1mZIHQE/p
+Hl+N+03UjY/2Q7xi+lWQaMaD9IUP6qgv+BSPzxUo+kuAGoVRZsHz43KBBkejTWXR
+o84hZerto9q7Id5Q3PDH6Ym2ouWRkALo6Sl1piIgOMeRQS/XFXQELdn+H5lKXtO+
+feBCbG6RXA3dWUpRiuJ6ZZCgpiYFzTvMrF8H/SIKmoxTIeJGw0JcQgu3ndsd3E9y
+mIiCs+yeJTp3d4poTGy8cdVScsT/mCHlLfIAhBOKKm6fZgAA3t/auE9vIHY0kYEl
+cWVo3bfAKfVUBj7MVIgTw7PHsvsCAwEAAaN9MHswWgYDVR0RBFMwUYIbbG9naW4u
+c3BoZXJpY2FsY293Z3JvdXAuY29thjJodHRwczovL2xvZ2luLnNwaGVyaWNhbGNv
+d2dyb3VwLmNvbS9pZHAvc2hpYmJvbGV0aDAdBgNVHQ4EFgQUwhhsab9pgXvCN/L4
+DE5sRp9YkJYwDQYJKoZIhvcNAQEFBQADggEBABhkSGP5AYk6dk+FcYxnJeYJO4Hz
+OQfsEdoI2sPO5QvlNyEbrGdnFg60Az39FT/MOCXaxKXbSsES36ynNTGy3oU4YjVX
+ZisvWPdhhLwklFncjXzmuW/SyUEpi0rQ4WUwCRCd6ZIVD6OfT8bRrNjeWsXutKRn
+liv9PgqxJl18uHbbo8TVSH8vGUos+uk10jTmMnD7UWqIKpL9DRUpIMPIWe0bmKkv
+ggsBLNiGWwMu0rJxa3sp7oU6aPGKH7OqtdZuhdRvS2LmLbpN4Bu0ZXfpDe2TwDxr
+pN0QbIIm4O6jC0FHlcM65s1+NdkYUO+1FwmZp1+HHWcADe4fzoz0hutfDNI=
+                    </ds:X509Certificate>
+                </ds:X509Data>
+            </ds:KeyInfo>
+        </KeyDescriptor>
+
+        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://login.sphericalcowgroup.com:8443/idp/profile/SAML2/SOAP/AttributeQuery"/>
+        
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        
+    </AttributeAuthorityDescriptor>
+    <Organization>
+        <OrganizationName xml:lang="en">Spherical Cow Group</OrganizationName>
+        <OrganizationDisplayName xml:lang="en">Spherical Cow Group</OrganizationDisplayName>
+        <OrganizationURL xml:lang="en">http://sphericalcowgroup.com</OrganizationURL>
+    </Organization>
+    
+</EntityDescriptor>

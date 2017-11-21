@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+    pyff:
+        image: mwatelescope/pyff
+        environment:
+            - PYFF_METADATA_SIGNING_CERT_FILE=/run/secrets/pyff_metadata_signing_cert_file
+            - PYFF_METADATA_SIGNING_KEY_FILE=/run/secrets/pyff_metadata_signing_key_file
+            - PYFF_PIPELINE=mwa_mdx.yaml
+            - PYFF_UPDATE_FREQUENCY=28800
+              #- PYFF_LOGLEVEL=INFO
+            - PYFF_LOGLEVEL=DEBUG
+        secrets:
+            - pyff_metadata_signing_cert_file
+            - pyff_metadata_signing_key_file
+        networks:
+            - default
+        ports:
+            - "80:8080"
+        deploy:
+            replicas: 1
+secrets:
+    pyff_metadata_signing_cert_file:
+        external: true
+    pyff_metadata_signing_key_file:
+        external: true

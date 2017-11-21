@@ -1,0 +1,27 @@
+- when update:
+    - load:
+        - aaf_test.xrd
+        - scg-idp-metadata.xml
+        - mwa-federation-metadata.xml
+    - select: 
+        - "!//md:EntityDescriptor[md:IDPSSODescriptor]"
+        - "mwa-federation-metadata.xml!//md:EntityDescriptor[md:SPSSODescriptor]"
+    - break
+- when request:
+    - select
+    - pipe:
+        - when accept application/xml:
+            - first
+            - finalize:
+                cacheDuration: PT12H
+                validUntil: P10D
+            - sign:
+                key: metadata-signer.key
+                cert: metadata-signer.crt
+            - emit application/xml
+            - break
+        - when accept application/json:
+            - xslt:
+                stylesheet: discojson.xsl
+            - emit application/json
+            - break
