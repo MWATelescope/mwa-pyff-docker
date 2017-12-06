@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<EntitiesDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="SCG20170630" Name="sphericalcowgroup.com" validUntil="2017-12-31T00:00:00Z" xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata sstc-saml-schema-metadata-2.0.xsd urn:mace:shibboleth:metadata:1.0 shibboleth-metadata-1.0.xsd http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd">
-<EntityDescriptor xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol" xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui" entityID="https://registry.mwatelescope.org/shibboleth" xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<EntitiesDescriptor
+        xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+        xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+        xmlns:idpdisc="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol"
+        xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+        xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="urn:oasis:names:tc:SAML:2.0:metadata sstc-saml-schema-metadata-2.0.xsd urn:mace:shibboleth:metadata:1.0 shibboleth-metadata-1.0.xsd http://www.w3.org/2000/09/xmldsig# xmldsig-core-schema.xsd">
 
-        <KeyDescriptor>
-            <ds:KeyInfo>
-                <ds:X509Data>
-                    <ds:X509Certificate>
+    <!-- COmanage Registry -->
+    <EntityDescriptor entityID="https://registry.mwatelescope.org/shibboleth">
+        <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+            <Extensions>
+                <idpdisc:DiscoveryResponse
+                        Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol"
+                        Location="https://registry.mwatelescope.org/Shibboleth.sso/Login"
+                        index="1"/>
+                <mdui:UIInfo>
+                    <mdui:DisplayName xml:lang="en">MWA Registry</mdui:DisplayName>
+                    <mdui:Description xml:lang="en">MWA Registry</mdui:Description>
+                </mdui:UIInfo>
+            </Extensions>
+            <KeyDescriptor>
+                <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
 MIIDQDCCAiigAwIBAgIJAN2gJmqEDVgrMA0GCSqGSIb3DQEBBQUAMCQxIjAgBgNV
 BAMTGXJlZ2lzdHJ5Lm13YXRlbGVzY29wZS5vcmcwHhcNMTcwOTA1MTgyODQ1WhcN
 MjcwOTAzMTgyODQ1WjAkMSIwIAYDVQQDExlyZWdpc3RyeS5td2F0ZWxlc2NvcGUu
@@ -25,39 +43,115 @@ FHO8hvCJb2s6oZ/IVllF5wFx6Ddlei6fEDT7AJ6Sm8IiPtdcpbzYB3/pJON+bOpj
 3r1gog+Qru88ivJZi3DZfJ38y5DRuNyY+idkEmLGHMQaLdUEnk0JygSkBJsevzmK
 zCTV0At+AHFLDSFyikTLHT8VVViGQcBnNaFRTne1gBxf1ZfUavdLyUus7Lm1J7RA
 C40W18MCcTRpUCK3mtHBwp95NOw=
-                    </ds:X509Certificate>
-                </ds:X509Data>
-            </ds:KeyInfo>
-        </KeyDescriptor>
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+                </ds:KeyInfo>
+            </KeyDescriptor>
+            <AssertionConsumerService 
+                    Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                    Location="https://registry.mwatelescope.org/Shibboleth.sso/SAML2/POST" 
+                    index="1"/>
+        </SPSSODescriptor>
+        <Organization>
+            <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
+            <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
+            <OrganizationURL xml:lang="en">http://mwatelescope.org</OrganizationURL>
+        </Organization>
+        <ContactPerson contactType="support">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="technical">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="other">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="administrative">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+    </EntityDescriptor>
 
-        <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://registry.mwatelescope.org/Shibboleth.sso/SAML2/POST" index="1"/>
+    <!-- wiki -->
+    <EntityDescriptor entityID="https://wiki.mwatelescope.org/shibboleth">
+        <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+            <Extensions>
+                <idpdisc:DiscoveryResponse
+                        Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol"
+                        Location="https://wiki.mwatelescope.org/Shibboleth.sso/Login"
+                        index="1"/>
+                <mdui:UIInfo>
+                    <mdui:DisplayName xml:lang="en">MWA Wiki</mdui:DisplayName>
+                    <mdui:Description xml:lang="en">MWA Wiki</mdui:Description>
+                </mdui:UIInfo>
+            </Extensions>
+            <KeyDescriptor>
+                <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIECTCCAnGgAwIBAgIJANkgY8MHYj2uMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNV
+BAMTFm13YS13aWtpLnBhd3NleS5vcmcuYXUwHhcNMTcxMjA1MTkwMzI1WhcNMjcx
+MjAzMTkwMzI1WjAhMR8wHQYDVQQDExZtd2Etd2lraS5wYXdzZXkub3JnLmF1MIIB
+ojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA0KzSvAwGzvfGtayzXIu8icq0
+iItOHXiNRbwqz8AZpQKPp8xlIpFpolIe4fvQWZ46m7qM9H/SlLOF7b/n5PabI4+a
+vU2MQsQiZ7zgRrNHNnCWughqDuK8UtGDAlFVqkpuOAUGSIZ+Mg0MvnSGOEBnniVr
+OXfXenIVXn2pCpSBoBE5CQ0gtpdmA+0OikjF86T+q4I35ZzZ7V/vcNpjZ3xOvbxU
+H3kaL5hcBzXsAux+m7vM78/VOBJe0aG4JXHA5jDm8+9BZaXtf8rmeTbsm8W0o7Cm
+4Siuio5FuMtd7asgoeF/QNZsDDnCia+HquWa1lRvUnZJXpGeVbjvEDUZoKJRHx7N
+buyG48QyvBLMebm9vMyrwVsckPwCSAY+zIVlgkZnnF63urj+/joItoEEVSwbkkYv
+E9pQAF9ZEr2CZIEdhhDZQNnrt3dDb9FTSO4ZaA739u4aRW8GcILFDU7C8bmxBDZr
+Nm3Uc7zNa4ohk4o/xJovqB3cUFtOVBetB1sJl+gRAgMBAAGjRDBCMCEGA1UdEQQa
+MBiCFm13YS13aWtpLnBhd3NleS5vcmcuYXUwHQYDVR0OBBYEFHwN8uTHSdIwxMst
+v0Qx4WLK7AHRMA0GCSqGSIb3DQEBCwUAA4IBgQADKPuyaKGXTTTnXkouEDJlKdTN
+RDejM7ja9f/v6wX4R5tA9VvLb/Dt5rzgSX2N2PATINxdAp3214nH6IzI2OHDcp7S
+SOt2wtADUF/nQloEO6tc2ZVPVPpkkiAjZsZsDSeLlQ9L4+m3y8mly7zn7LtCPNb+
+nHoed5MmLrTK0tDtfASrf47J4I62otjKBMhQWfLZhOz5RvajiB/M2loi1b65LnLY
+fSS7vOoP5D8KqOIxyo9imFbgu1+V2QnSKpAtwjA5mqbpc9DvWq1gjJi+H9pLRWc7
+Vx3bTQ+qa9UpydWgQqlNUPq7MQZRT7a/1L4Zf9D+I6OPV/qWE4EUaWHpZBzR4l5w
+Q6GWzQaN5fHmIwIkVtBeJDiPHk4I0L6B80JHSuiN6Lv+EsgnffOciwEU50E94lQt
+vm4XCDqKnLwmQ6IIVW0wc50UPudFahZLdZUK6Aw22jHXxuz63l6DMXInNeOMrhiZ
+muQhM+oUmwbIAT2KVoE+GqidfB2sS8EYzWXxBlw=
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+                </ds:KeyInfo>
+            </KeyDescriptor>
+            <AssertionConsumerService 
+                    Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                    Location="https://wiki.mwatelescope.org/Shibboleth.sso/SAML2/POST" 
+                    index="1"/>
+        </SPSSODescriptor>
+        <Organization>
+            <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
+            <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
+            <OrganizationURL xml:lang="en">http://mwatelescope.org</OrganizationURL>
+        </Organization>
+        <ContactPerson contactType="support">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="technical">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="other">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="administrative">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+    </EntityDescriptor>
 
-    </SPSSODescriptor>
-
-    <Organization>
-        <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
-        <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
-        <OrganizationURL xml:lang="en">http://mwatelescope.org</OrganizationURL>
-    </Organization>
-    <ContactPerson contactType="support">
-      <GivenName>Greg</GivenName>
-      <SurName>Sleap</SurName>
-      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
-    </ContactPerson>
-    <ContactPerson contactType="technical">
-      <GivenName>Greg</GivenName>
-      <SurName>Sleap</SurName>
-      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
-    </ContactPerson>
-    <ContactPerson contactType="other">
-      <GivenName>Greg</GivenName>
-      <SurName>Sleap</SurName>
-      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
-    </ContactPerson>
-    <ContactPerson contactType="administrative">
-      <GivenName>Greg</GivenName>
-      <SurName>Sleap</SurName>
-      <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
-    </ContactPerson>
-</EntityDescriptor>
 </EntitiesDescriptor>
