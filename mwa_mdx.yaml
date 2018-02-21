@@ -3,6 +3,7 @@
         - aaf_prod.xrd
         - scg-idp-metadata.xml
         - mwa-federation-metadata.xml
+        - unitedid-metadata.xml
     - select: 
         - "!//md:EntityDescriptor[md:IDPSSODescriptor]"
         - "mwa-federation-metadata.xml!//md:EntityDescriptor[md:SPSSODescriptor]"
