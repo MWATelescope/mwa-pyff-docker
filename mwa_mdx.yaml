@@ -1,6 +1,6 @@
 - when update:
     - load:
-        - aaf_prod.xrd
+        - aaf_edugain.xrd
         - scg-idp-metadata.xml
         - mwa-federation-metadata.xml
         - unitedid-metadata.xml
