@@ -29,6 +29,7 @@ COPY start.sh /usr/local/sbin/pyff-start.sh
 COPY aaf-metadata-certificate.pem /opt/pyff/aaf-metadata-certificate.pem
 COPY aaf_test.xrd /opt/pyff/aaf_test.xrd
 COPY aaf_prod.xrd /opt/pyff/aaf_prod.xrd
+COPY aaf_edugain.xrd /opt/pyff/aaf_edugain.xrd
 COPY mwa_mdx.yaml /opt/pyff/mwa_mdx.yaml
 COPY mwa-federation-metadata.xml /opt/pyff/mwa-federation-metadata.xml
 COPY scg-idp-metadata.xml /opt/pyff/scg-idp-metadata.xml
