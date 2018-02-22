@@ -9,6 +9,8 @@
         - "https://md.aaf.edu.au/aaf-metadata.xml!//md:EntityDescriptor[@entityID='https://proxy.mwatelescope.org/sp']"
         - "https://md.aaf.edu.au/aaf-metadata.xml!//md:EntityDescriptor[md:IDPSSODescriptor]"
         - "https://md.aaf.edu.au/aaf-edugain-metadata.xml!//md:EntityDescriptor[md:IDPSSODescriptor and md:Extensions/mdrpi:RegistrationInfo/@registrationAuthority='https://incommon.org' and not(md:Extensions/mdattr:EntityAttributes/saml:Attribute/saml:AttributeValue = 'http://refeds.org/category/hide-from-discovery')]"
+        - "scg-idp-metadata.xml!//md:EntityDescriptor[md:IDPSSODescriptor]"
+        - "unitedid-metadata.xml!//md:EntityDescriptor[md:IDPSSODescriptor]"
     - break
 - when request:
     - select:
