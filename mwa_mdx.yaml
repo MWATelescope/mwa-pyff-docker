@@ -1,15 +1,17 @@
 - when update:
     - load:
+        - aaf_prod.xrd
         - aaf_edugain.xrd
         - scg-idp-metadata.xml
         - mwa-federation-metadata.xml
         - unitedid-metadata.xml
-    - select: 
-        - "!//md:EntityDescriptor[md:IDPSSODescriptor]"
-        - "mwa-federation-metadata.xml!//md:EntityDescriptor[md:SPSSODescriptor]"
+    - select as /mwa_discovery: 
+        - "https://md.aaf.edu.au/aaf-metadata.xml!//md:EntityDescriptor[@entityID='https://proxy.mwatelescope.org/sp']"
+        - "https://md.aaf.edu.au/aaf-metadata.xml!//md:EntityDescriptor[md:IDPSSODescriptor]"
+        - "https://md.aaf.edu.au/aaf-edugain-metadata.xml!//md:EntityDescriptor[md:IDPSSODescriptor and md:Extensions/mdrpi:RegistrationInfo/@registrationAuthority='https://incommon.org' and not(md:Extensions/mdattr:EntityAttributes/saml:Attribute/saml:AttributeValue = 'http://refeds.org/category/hide-from-discovery')]"
     - break
 - when request:
-    - select
+    - select:
     - pipe:
         - when accept application/xml:
             - first
