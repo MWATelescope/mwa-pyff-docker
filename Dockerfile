@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         virtualenv \
         zlib1g-dev
 
-# Use the head of the master branch of the official pyFF repository
-ENV PYFF_SRC_URL=git+git://github.com/leifj/pyFF@master
+# Use tag 0.10.0 of the official pyFF repository
+ENV PYFF_SRC_URL=git+git://github.com/leifj/pyFF@0.10.0
 
 # Use the head of the master branch of the official pyXMLSecurity repository
 ENV PYXMLSECURITY_SRC_URL=git+git://github.com/leifj/pyXMLSecurity.git#egg=pyXMLSecurity
