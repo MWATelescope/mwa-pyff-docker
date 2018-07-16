@@ -2,14 +2,13 @@ version: '3.4'
 
 services:
     pyff:
-        image: mwatelescope/pyff:0.10.0
+        image: mwatelescope/pyff:pull_144
         environment:
             - PYFF_METADATA_SIGNING_CERT_FILE=/run/secrets/pyff_metadata_signing_cert_file
             - PYFF_METADATA_SIGNING_KEY_FILE=/run/secrets/pyff_metadata_signing_key_file
             - PYFF_PIPELINE=mwa_mdx.yaml
             - PYFF_UPDATE_FREQUENCY=28800
-              #- PYFF_LOGLEVEL=INFO
-            - PYFF_LOGLEVEL=DEBUG
+            - PYFF_LOGLEVEL=INFO
         secrets:
             - pyff_metadata_signing_cert_file
             - pyff_metadata_signing_key_file
