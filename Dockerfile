@@ -11,8 +11,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         virtualenv \
         zlib1g-dev
 
-# Use the merged version of master after pull 144 included.
-ENV PYFF_SRC_URL=git+https://github.com/IdentityPython/pyFF.git@refs/pull/144/merge
+# Use commit a7e9e317019b1c3f42fbddbd52f5ba3d19b2cf5d
+ENV PYFF_SRC_URL=git+https://github.com/IdentityPython/pyFF.git@a7e9e317019b1c3f42fbddbd52f5ba3d19b2cf5d
 
 # Use the head of the master branch of the official pyXMLSecurity repository
 ENV PYXMLSECURITY_SRC_URL=git+git://github.com/IdentityPython/pyXMLSecurity
