@@ -1,36 +1,20 @@
-- when edugain_whitelist:
+- when edugain_transform:
     - xslt:
-        stylesheet: edugain_whitelist.xsl
+        stylesheet: edugain_transform.xsl
     - break
-- when aaf_whitelist:
+- when aaf_transform:
     - xslt:
-        stylesheet: aaf_whitelist.xsl
+        stylesheet: aaf_transform.xsl
     - break
 - when update:
     - load:
         - unitedid-metadata.xml
-        - aaf_prod.xrd as aaf_prod via aaf_whitelist
-        - aaf_edugain.xrd as aaf_edugain via edugain_whitelist
+        - aaf_prod.xrd as aaf_prod via aaf_transform
+        - aaf_edugain.xrd as aaf_edugain via edugain_transform
         - scg-idp-metadata.xml
         - mwa-federation-metadata.xml
     - select as /mwa_discovery: 
-        - https://proxy.mwatelescope.org/sp
-        - https://idp2.anu.edu.au/idp/shibboleth
-        - https://idpp1.curtin.edu.au/idp/shibboleth
-        - https://aafidp2.csiro.au/idp/shibboleth
-        - https://idp.unimelb.edu.au/idp/shibboleth
-        - https://idp.cc.swin.edu.au/idp/shibboleth
-        - https://federation.sydney.edu.au/idp/shibboleth
-        - https://idp.uwa.edu.au/idp/shibboleth
-        - https://idp.uws.edu.au/idp/shibboleth
-        - urn:mace:incommon:asu.edu
-        - https://sso.brown.edu/idp/shibboleth
-        - urn:mace:incommon:berkeley.edu
-        - https://idp.utorauth.utoronto.ca/shibboleth
-        - urn:mace:incommon:washington.edu
-        - https://idp.uwm.edu/idp/shibboleth
-        - https://login.sphericalcowgroup.com/idp/shibboleth
-        - https://idp.unitedid.org/idp/shibboleth
+        - "!//md:EntityDescriptor[md:IDPSSODescriptor]"
     - break
 - when request:
     - select:

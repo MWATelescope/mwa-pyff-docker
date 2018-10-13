@@ -11,18 +11,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         virtualenv \
         zlib1g-dev
 
-# Use commit a7e9e317019b1c3f42fbddbd52f5ba3d19b2cf5d
-ENV PYFF_SRC_URL=git+https://github.com/IdentityPython/pyFF.git@a7e9e317019b1c3f42fbddbd52f5ba3d19b2cf5d
-
-# Use the head of the master branch of the official pyXMLSecurity repository
-ENV PYXMLSECURITY_SRC_URL=git+git://github.com/IdentityPython/pyXMLSecurity
+# Use commit fd47b78e1f14dbf16d7a345fc22894c6ae838c29 which is
+# on the ra21-l2 branch.
+ENV PYFF_SRC_URL=git+https://github.com/IdentityPython/pyFF.git@fd47b78e1f14dbf16d7a345fc22894c6ae838c29
 
 RUN mkdir -p /opt/pyff \
     && virtualenv /opt/pyff --no-site-packages \
     && . /opt/pyff/bin/activate \
-    && pip install lxml==4.1.1 \
-    && pip install ${PYXMLSECURITY_SRC_URL} \
-    && pip install ${PYFF_SRC_URL}
+    && pip install ${PYFF_SRC_URL} \
+    && mkdir -p /opt/pyff/lib/python2.7/site-packages/pyff/site/static/logos
 
 WORKDIR /opt/pyff
 
@@ -35,8 +32,10 @@ COPY mwa_mdx.yaml /opt/pyff/mwa_mdx.yaml
 COPY mwa-federation-metadata.xml /opt/pyff/mwa-federation-metadata.xml
 COPY scg-idp-metadata.xml /opt/pyff/scg-idp-metadata.xml
 COPY unitedid-metadata.xml /opt/pyff/unitedid-metadata.xml
-COPY edugain_whitelist.xsl /opt/pyff/edugain_whitelist.xsl
-COPY aaf_whitelist.xsl /opt/pyff/aaf_whitelist.xsl
+COPY edugain_transform.xsl /opt/pyff/edugain_transform.xsl
+COPY aaf_transform.xsl /opt/pyff/aaf_transform.xsl
 COPY ds.html /opt/pyff/lib/python2.7/site-packages/pyff/templates/ds.html
+
+COPY logos/* /opt/pyff/lib/python2.7/site-packages/pyff/site/static/logos/
 
 ENTRYPOINT ["/usr/local/sbin/pyff-start.sh"]
