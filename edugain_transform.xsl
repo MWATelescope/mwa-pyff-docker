@@ -55,6 +55,11 @@
     <xsl:template match="/md:EntitiesDescriptor/md:EntityDescriptor[md:AttributeAuthorityDescriptor and not(md:IDPSSODescriptor)]">
     </xsl:template>
 
+    <!-- Match all entities registered by the AAF and take no action so they are
+         not copied into the output, since they are loaded using AAF only feed. -->
+    <xsl:template match="/md:EntitiesDescriptor/md:EntityDescriptor[md:Extensions/mdrpi:RegistrationInfo/@registrationAuthority = 'https://aaf.edu.au']">
+    </xsl:template>
+
     <!-- Change name for UW-Milwaukee to work around parsing issue. -->
     <xsl:template match="/md:EntitiesDescriptor/md:EntityDescriptor[@entityID='https://idp.uwm.edu/idp/shibboleth']/md:IDPSSODescriptor/md:Extensions/mdui:UIInfo">
         <mdui:UIInfo>
