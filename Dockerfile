@@ -38,4 +38,9 @@ COPY ds.html /opt/pyff/lib/python2.7/site-packages/pyff/templates/ds.html
 
 COPY logos/* /opt/pyff/lib/python2.7/site-packages/pyff/site/static/logos/
 
+# Until fixes are merged into upstream pyFF copy over Javascript that
+# fixes cache timeout issue and IE11 issue.
+COPY ds-client.js /opt/pyff/lib/python2.7/site-packages/pyff/site/static/js/
+COPY sha1.js /opt/pyff/lib/python2.7/site-packages/pyff/site/static/js/
+
 ENTRYPOINT ["/usr/local/sbin/pyff-start.sh"]
