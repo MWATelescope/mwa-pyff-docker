@@ -47,9 +47,9 @@ C40W18MCcTRpUCK3mtHBwp95NOw=
                     </ds:X509Data>
                 </ds:KeyInfo>
             </KeyDescriptor>
-            <AssertionConsumerService 
+            <AssertionConsumerService
                     Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-                    Location="https://registry.mwatelescope.org/Shibboleth.sso/SAML2/POST" 
+                    Location="https://registry.mwatelescope.org/Shibboleth.sso/SAML2/POST"
                     index="1"/>
         </SPSSODescriptor>
         <Organization>
@@ -122,9 +122,9 @@ muQhM+oUmwbIAT2KVoE+GqidfB2sS8EYzWXxBlw=
                     </ds:X509Data>
                 </ds:KeyInfo>
             </KeyDescriptor>
-            <AssertionConsumerService 
+            <AssertionConsumerService
                     Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-                    Location="https://wiki.mwatelescope.org/Shibboleth.sso/SAML2/POST" 
+                    Location="https://wiki.mwatelescope.org/Shibboleth.sso/SAML2/POST"
                     index="1"/>
         </SPSSODescriptor>
         <Organization>
@@ -154,59 +154,55 @@ muQhM+oUmwbIAT2KVoE+GqidfB2sS8EYzWXxBlw=
         </ContactPerson>
     </EntityDescriptor>
 
-    <!-- test-sp.mwatelescope.org  -->
-    <EntityDescriptor entityID="https://test-sp.mwatelescope.org/shibboleth">
+    <!-- test-asvo.mwatelescope.org  -->
+    <EntityDescriptor entityID="https://test-asvo.mwatelescope.org/sp">
         <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
             <Extensions>
-                <idpdisc:DiscoveryResponse
-                        Binding="urn:oasis:names:tc:SAML:profiles:SSO:idp-discovery-protocol"
-                        Location="https://test-sp.mwatelescope.org/Shibboleth.sso/Login"
-                        index="1"/>
                 <mdui:UIInfo>
-                    <mdui:DisplayName xml:lang="en">MWA Test Service Provider</mdui:DisplayName>
-                    <mdui:Description xml:lang="en">MWA Test Service Provider</mdui:Description>
+                    <mdui:DisplayName xml:lang="en">MWA Test ASVO Service Provider</mdui:DisplayName>
+                    <mdui:Description xml:lang="en">MWA Test ASVO Service Provider</mdui:Description>
                 </mdui:UIInfo>
             </Extensions>
             <KeyDescriptor>
                 <ds:KeyInfo>
                     <ds:X509Data>
                         <ds:X509Certificate>
-MIIEPDCCAqSgAwIBAgIJAMkcUy0wjBz5MA0GCSqGSIb3DQEBCwUAMCMxITAfBgNV
-BAMTGHRlc3Qtc3AubXdhdGVsZXNjb3BlLm9yZzAeFw0xODA4MDMwMDQzMDFaFw0y
-ODA3MzEwMDQzMDFaMCMxITAfBgNVBAMTGHRlc3Qtc3AubXdhdGVsZXNjb3BlLm9y
-ZzCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAOc68QForhw6Be+3rTfT
-Tf9jTFd/mh6osHtDw8RvHOi8W2jdIw2RKihKY34QWPbgoPjjaaUpnAjXYooeEr51
-Lub8Gpoa2EsFYhoalsKRXMWRWO0hCJ2dAhdo410KE0sMvw4AqTXsBqegkd/7HYhZ
-cA7rpyx+nvnI4t3czVyN42f14AaDD+/mB0nqF8Z0lm4ZzyKCdNXrQeHyWJDU4spG
-eveEvwip0/phAS5v37r/aV6K1rcI6IjSzbLtTiBb80YOaJAEFnk4mcBaJje+pWnA
-cr3SChgCLGTpQyio5LQak+CW1AR2lHP5rX+bI/DroDOILEvq6kycJa/JRwTLRYaH
-HeI+BY7Ks+r8X2vQ129S8u6dJ6As+MijtwinVnNpar+rU/MwUBWIPN/3DRv2qMdC
-CFr5K/zJNE28nck0NgPzFLG/4iPJtAvgr/Aqi7LaKtC/wTTNMI6StALKnf6GvMvV
-bPry/yNL0hqq81V7IrIW3dsR5syrgm6VkYlqOPFvYZD+iQIDAQABo3MwcTBQBgNV
-HREESTBHghh0ZXN0LXNwLm13YXRlbGVzY29wZS5vcmeGK2h0dHBzOi8vdGVzdC1z
-cC5td2F0ZWxlc2NvcGUub3JnL3NoaWJib2xldGgwHQYDVR0OBBYEFO6cK7w6XB1e
-6Xm4jAM6xB5SMYx+MA0GCSqGSIb3DQEBCwUAA4IBgQCRo6OsvOkPCJJ0awajYpSC
-mxb8qet74SmlPZLUSSndbWXjZLrUzJsYSlEkH5zMyA7/ZNI5gcOu5FtsIpX1H+hG
-yE4EN2Zkkb+kVrkWM5Xc6s7GPZLO0/ELb9cjWFwFBB3I8SIqICZReQgBsbATNCD+
-wGXOKM1HNCzeZ4aha9BnJthwnEBT6RpMFXPkIzCwCnIoVtgAUs09Mf5YHEfE8/Wv
-1AobvJG3lCLqNzrgJKVNL1WO1uMqgBjwjpSmQ0O6wK0jmII0bGiCq29+Ho1Wy7iU
-l7ByAwAf1oDWPzGuIOXeRBGqcFB7aScQ6U9wmawowKI6IrYS3upHob8frJqnZw4p
-wPm8H+C39kteXTW3S2NWpe7QebTTXYgkWsW6xWp5r5N9O9daNP1DnQ8RvCAPIZ95
-blklUT0UInTegAxL+w+Q4hNGHMT6qge3jYGOfrPCzCmhcq3BXljyrXbA+SOpxqum
-Gl1fjBvbpfSbJpHNXclbwcyo/k2ypRkzqTu87z850K4=
+MIIEHzCCAwegAwIBAgIJAP9kap9vLNy6MA0GCSqGSIb3DQEBCwUAMIGlMQswCQYD
+VQQGEwJBVTELMAkGA1UECAwCV0ExEDAOBgNVBAcMB0JlbnRsZXkxGjAYBgNVBAoM
+EUN1cnRpbiBVbml2ZXJzaXR5MQ0wCwYDVQQLDARDSVJBMR4wHAYDVQQDDBVhc3Zv
+Lm13YXRlbGVzY29wZS5vcmcxLDAqBgkqhkiG9w0BCQEWHWFzdm9fc3VwcG9ydEBt
+d2F0ZWxlc2NvcGUub3JnMB4XDTE4MTEwOTA2NDgxNVoXDTI4MTEwODA2NDgxNVow
+gaUxCzAJBgNVBAYTAkFVMQswCQYDVQQIDAJXQTEQMA4GA1UEBwwHQmVudGxleTEa
+MBgGA1UECgwRQ3VydGluIFVuaXZlcnNpdHkxDTALBgNVBAsMBENJUkExHjAcBgNV
+BAMMFWFzdm8ubXdhdGVsZXNjb3BlLm9yZzEsMCoGCSqGSIb3DQEJARYdYXN2b19z
+dXBwb3J0QG13YXRlbGVzY29wZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDMjktgpaiPl++3iGEsieqrNAMASAGowiaReNrW2XGiEfqR/lBhDAwV
+ArcE9dLHhBun5YaaH7TY8WRxQTKpvWzo8i/AViwDwSA4JXoSQW3CGSIpJnoUzXAp
+T5gpOn3J+MHIMV/FnRio0Nyu0/sLpAMmxzMqlijcwGPZPbtD10AhXdtIOSWaucH7
+NiETk/qs7zqQujEr8NbjLrpFrK2WnptmMhvGNdOM201C0q0FkxGUzwRtpxLHZkwA
+wPrpm4ioM/z7YdaGZFkSZ8fUJc5ONOJarKnoad7YVAsZOZXogD37YDLc7lVac5VK
+JRuKzg612GJyRqIE9O/OWwCAjLyvMzQTAgMBAAGjUDBOMB0GA1UdDgQWBBS7ZNbF
+ex8x+BScqxPrZ0NKHCrJyzAfBgNVHSMEGDAWgBS7ZNbFex8x+BScqxPrZ0NKHCrJ
+yzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQC6WJlkB9kKyR0eLnNT
+8SgOF0hU3tVa27ffc4tw1tb5Ezwto79aXWupGQNpmCtAb0R9FCaeWmAobm8CSo8J
+DkJ7VeBlpajBxB5dZ3uNgalrhDmAxiQemVIYdIpkxV7xHWXtI1AcRlwdtDXJTFnK
+vmuXhDER4AjQBEy9G/47fb8KRtBsVVZJC2Se6SVvlROU2lJn4zBu6WGZiEg3pDGD
+yyig6JBP4edTTWokjp1QValw4qAzP1Ajc2imAhNJcz1RzVtvoWxsSQ+q8793QLLp
+hX2MhvA7diSQTiHJK45XgLliMhYXkQnghEcIB5CykKPb2okbMnzB69p5L+qRc3jY
+EPH2
                         </ds:X509Certificate>
                     </ds:X509Data>
                 </ds:KeyInfo>
             </KeyDescriptor>
-            <AssertionConsumerService 
+            <AssertionConsumerService
                     Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-                    Location="https://test-sp.mwatelescope.org/Shibboleth.sso/SAML2/POST" 
+                    Location="https://test-asvo.mwatelescope.org/acs"
                     index="1"/>
         </SPSSODescriptor>
         <Organization>
             <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
             <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
-            <OrganizationURL xml:lang="en">http://mwatelescope.org</OrganizationURL>
+            <OrganizationURL xml:lang="en">http://www.mwatelescope.org</OrganizationURL>
         </Organization>
         <ContactPerson contactType="support">
           <GivenName>Greg</GivenName>
