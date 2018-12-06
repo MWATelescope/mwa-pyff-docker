@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
     pyff:
-        image: mwatelescope/pyff:85d319
+        image: mwatelescope/pyff:2b409e
         environment:
             - PYFF_METADATA_SIGNING_CERT_FILE=/run/secrets/pyff_metadata_signing_cert_file
             - PYFF_METADATA_SIGNING_KEY_FILE=/run/secrets/pyff_metadata_signing_key_file
