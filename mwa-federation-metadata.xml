@@ -154,7 +154,79 @@ muQhM+oUmwbIAT2KVoE+GqidfB2sS8EYzWXxBlw=
         </ContactPerson>
     </EntityDescriptor>
 
-    <!-- test-asvo.mwatelescope.org  -->
+   <!-- asvo.mwatelescope.org production  -->
+    <EntityDescriptor entityID="https://asvo.mwatelescope.org/sp">
+        <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+            <Extensions>
+                <mdui:UIInfo>
+                    <mdui:DisplayName xml:lang="en">MWA ASVO Service Provider</mdui:DisplayName>
+                    <mdui:Description xml:lang="en">MWA ASVO Service Provider</mdui:Description>
+                </mdui:UIInfo>
+            </Extensions>
+            <KeyDescriptor>
+                <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIEHzCCAwegAwIBAgIJAP9kap9vLNy6MA0GCSqGSIb3DQEBCwUAMIGlMQswCQYD
+VQQGEwJBVTELMAkGA1UECAwCV0ExEDAOBgNVBAcMB0JlbnRsZXkxGjAYBgNVBAoM
+EUN1cnRpbiBVbml2ZXJzaXR5MQ0wCwYDVQQLDARDSVJBMR4wHAYDVQQDDBVhc3Zv
+Lm13YXRlbGVzY29wZS5vcmcxLDAqBgkqhkiG9w0BCQEWHWFzdm9fc3VwcG9ydEBt
+d2F0ZWxlc2NvcGUub3JnMB4XDTE4MTEwOTA2NDgxNVoXDTI4MTEwODA2NDgxNVow
+gaUxCzAJBgNVBAYTAkFVMQswCQYDVQQIDAJXQTEQMA4GA1UEBwwHQmVudGxleTEa
+MBgGA1UECgwRQ3VydGluIFVuaXZlcnNpdHkxDTALBgNVBAsMBENJUkExHjAcBgNV
+BAMMFWFzdm8ubXdhdGVsZXNjb3BlLm9yZzEsMCoGCSqGSIb3DQEJARYdYXN2b19z
+dXBwb3J0QG13YXRlbGVzY29wZS5vcmcwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+ggEKAoIBAQDMjktgpaiPl++3iGEsieqrNAMASAGowiaReNrW2XGiEfqR/lBhDAwV
+ArcE9dLHhBun5YaaH7TY8WRxQTKpvWzo8i/AViwDwSA4JXoSQW3CGSIpJnoUzXAp
+T5gpOn3J+MHIMV/FnRio0Nyu0/sLpAMmxzMqlijcwGPZPbtD10AhXdtIOSWaucH7
+NiETk/qs7zqQujEr8NbjLrpFrK2WnptmMhvGNdOM201C0q0FkxGUzwRtpxLHZkwA
+wPrpm4ioM/z7YdaGZFkSZ8fUJc5ONOJarKnoad7YVAsZOZXogD37YDLc7lVac5VK
+JRuKzg612GJyRqIE9O/OWwCAjLyvMzQTAgMBAAGjUDBOMB0GA1UdDgQWBBS7ZNbF
+ex8x+BScqxPrZ0NKHCrJyzAfBgNVHSMEGDAWgBS7ZNbFex8x+BScqxPrZ0NKHCrJ
+yzAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQC6WJlkB9kKyR0eLnNT
+8SgOF0hU3tVa27ffc4tw1tb5Ezwto79aXWupGQNpmCtAb0R9FCaeWmAobm8CSo8J
+DkJ7VeBlpajBxB5dZ3uNgalrhDmAxiQemVIYdIpkxV7xHWXtI1AcRlwdtDXJTFnK
+vmuXhDER4AjQBEy9G/47fb8KRtBsVVZJC2Se6SVvlROU2lJn4zBu6WGZiEg3pDGD
+yyig6JBP4edTTWokjp1QValw4qAzP1Ajc2imAhNJcz1RzVtvoWxsSQ+q8793QLLp
+hX2MhvA7diSQTiHJK45XgLliMhYXkQnghEcIB5CykKPb2okbMnzB69p5L+qRc3jY
+EPH2
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+                </ds:KeyInfo>
+            </KeyDescriptor>
+            <AssertionConsumerService
+                    Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                    Location="https://asvo.mwatelescope.org/acs"
+                    index="1"/>
+        </SPSSODescriptor>
+        <Organization>
+            <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
+            <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
+            <OrganizationURL xml:lang="en">http://www.mwatelescope.org</OrganizationURL>
+        </Organization>
+        <ContactPerson contactType="support">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="technical">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="other">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="administrative">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+    </EntityDescriptor>
+
+    <!-- test-asvo.mwatelescope.org test  -->
     <EntityDescriptor entityID="https://test-asvo.mwatelescope.org/sp">
         <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
             <Extensions>
