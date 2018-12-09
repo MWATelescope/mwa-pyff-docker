@@ -31,6 +31,7 @@ COPY aaf_edugain.xrd /opt/pyff/aaf_edugain.xrd
 COPY mwa_mdx.yaml /opt/pyff/mwa_mdx.yaml
 COPY mwa-federation-metadata.xml /opt/pyff/mwa-federation-metadata.xml
 COPY scg-idp-metadata.xml /opt/pyff/scg-idp-metadata.xml
+COPY samlgw01.mwatelescope.org-metadata.xml /opt/pyff/samlgw01.mwatelescope.org-metadata.xml
 COPY unitedid-metadata.xml /opt/pyff/unitedid-metadata.xml
 COPY edugain_transform.xsl /opt/pyff/edugain_transform.xsl
 COPY aaf_transform.xsl /opt/pyff/aaf_transform.xsl

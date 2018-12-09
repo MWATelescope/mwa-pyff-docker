@@ -12,6 +12,7 @@
         - aaf_prod.xrd as aaf_prod via aaf_transform
         - aaf_edugain.xrd as aaf_edugain via edugain_transform
         - scg-idp-metadata.xml
+        - samlgw01.mwatelescope.org-metadata.xml
         - mwa-federation-metadata.xml
     - select as /mwa_discovery: 
         - "!//md:EntityDescriptor[md:IDPSSODescriptor]"
