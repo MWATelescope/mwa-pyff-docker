@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor
+        xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+        xmlns:shibmd="urn:mace:shibboleth:metadata:1.0"
+        xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+        xmlns:mdui="urn:oasis:names:tc:SAML:metadata:ui"
+        entityID="https://samlgw01.mwatelescope.org/idp">
+  <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="false">
+    <md:Extensions>
+      <shibmd:Scope xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" regexp="false">samlgw01.mwatelescope.org</shibmd:Scope>
+      <mdui:UIInfo>
+          <mdui:DisplayName xml:lang="en">ORCID</mdui:DisplayName>
+          <mdui:Logo height="400" width="400" xml:lang="en" >http://login-chooser.mwatelescope.org/static/logos/orcid.png</mdui:Logo>
+      </mdui:UIInfo>
+    </md:Extensions>
+    <md:KeyDescriptor use="signing">
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+            <ds:X509Certificate>
+MIIDHjCCAgagAwIBAgIJALPYfb+JlA9ZMA0GCSqGSIb3DQEBCwUAMCQxIjAgBgNV
+BAMMGXNhbWxndzAxLm13YXRlbGVzY29wZS5vcmcwHhcNMTgxMjA5MTU0NDQ4WhcN
+MjgxMjA4MTU0NDQ4WjAkMSIwIAYDVQQDDBlzYW1sZ3cwMS5td2F0ZWxlc2NvcGUu
+b3JnMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2EXpQZlbDlZredvi
+rMzC4ZmzyLjKmRcmk9FaW8i3woIGEP3dc2t2unnywCKp5IRttVW+qJpDM4UW9vEg
+j+wZAxbtauUMa5L/Sqd6bAF8pRe4/ZmA0nSNG9S2NXFfr1AoEGpqZVjwSyHfBm4J
+WTOyXON6jpJpLnZz8s6H54TrrO47b2RVDTrqmSPQPa8JI/SRr8+d4TYpGmb9nQlD
+994rn0Ec+6HWFBPxmVUYU1aQSmd3of+aPt2hY47567qIa2wHD1u42RSSjIIzOmAR
+MDBtzO1k7svA9PPfRkAaXr700KtGLzYrwwOD8x/ZemKe1fLlTfFuDTStamob8U/H
+mZnhSwIDAQABo1MwUTAdBgNVHQ4EFgQUY+dykmU/OniBlCdEzBgmYo8t/xkwHwYD
+VR0jBBgwFoAUY+dykmU/OniBlCdEzBgmYo8t/xkwDwYDVR0TAQH/BAUwAwEB/zAN
+BgkqhkiG9w0BAQsFAAOCAQEAPVn1ArE07VTScuCh4KylKJ4xRCH1UeukhkUtreMb
+KyZzxHqQzMw3ijZyzqNfrbMd4o6Yjp8o4VQHYF50rGh96zjOeMt/NfCkxJ2eXwwH
+7mgmLxASJINvA4wtF3nQatsh9iVEDJIKXmVBvGg9w00m5BdbqQebTosxKRj2Ye7p
+A743q3eQUdJmlRfMrYliQgEHtN/6SaL+YGPJrFI4pEoRNw0CYPzRPJ5fbEmw1Rve
+0VbPMpQx4LEWlW8coXilmHGpLMTL2OgTmoiVQ7+gXV//r+4UsFgGytGyOcc5hpnB
+T9KKeP4IrX6xzi482lMpXm4Cnh6W+F5UzUdo4CerxuZNHA==
+            </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+    <md:SingleSignOnService
+            Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+            Location="https://samlgw01.mwatelescope.org/simplesaml/saml2/idp/SSOService.php"/>
+  </md:IDPSSODescriptor>
+  <md:Organization>
+      <md:OrganizationName xml:lang="en">ORCID</md:OrganizationName>
+      <md:OrganizationDisplayName xml:lang="en">ORCID</md:OrganizationDisplayName>
+      <md:OrganizationURL xml:lang="en">https://orcid.org</md:OrganizationURL>
+  </md:Organization>
+  <md:ContactPerson contactType="technical">
+    <md:GivenName>Administrator</md:GivenName>
+    <md:EmailAddress>greg.sleap@curtin.edu.au</md:EmailAddress>
+  </md:ContactPerson>
+</md:EntityDescriptor>
