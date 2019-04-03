@@ -298,4 +298,76 @@ EPH2
         </ContactPerson>
     </EntityDescriptor>
 
+    <!-- lists.mwatelescope.org  -->
+    <EntityDescriptor entityID="https://lists.mwatelescope.org/sp">
+        <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+            <Extensions>
+                <mdui:UIInfo>
+                    <mdui:DisplayName xml:lang="en">MWA Mail List Service Provider</mdui:DisplayName>
+                    <mdui:Description xml:lang="en">MWA Mail List Service Provider</mdui:Description>
+                </mdui:UIInfo>
+            </Extensions>
+            <KeyDescriptor>
+                <ds:KeyInfo>
+                    <ds:X509Data>
+                        <ds:X509Certificate>
+MIIELDCCApSgAwIBAgIJAPvhTSje9lfJMA0GCSqGSIb3DQEBCwUAMCExHzAdBgNV
+BAMTFmxpc3RzLm13YXRlbGVzY29wZS5vcmcwHhcNMTkwNDAzMjIyMjAwWhcNMjkw
+MzMxMjIyMjAwWjAhMR8wHQYDVQQDExZsaXN0cy5td2F0ZWxlc2NvcGUub3JnMIIB
+ojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEA8LV8a9fuRkFgKJhDczmOJrNJ
+x7ZrjRefTzNMtUcmA6l08BOcf5pqdgw6c0iG1/TKs22okGKXn3kAA1QwVgYWLDOT
+H4yF1p4VR+oGkcDgBbbICh+UP6b9crEYTVxo9N825HpA5fet1jwqcD8YkuRRaNVy
++f2N7gjTW4Gcq0Iv5gHwZ9dG5klpZS013heHG1WlhQL0VuHaokxV7ZeoN9ARfdUK
+6V4Se2yv+qBHh17G3ihqA+VpVkU+K3Ecb6eL++aXEWm6fw/WQjZEG/xTEVexUDCS
+r/NnSF7KrEO//j/Ak0q10TuAuccI0STTTRE6rEvL9Ii5oND5/IBjhqmg23lwExnL
+Ct9NtK7CjUk+pNNnj07u9istmZHKmTjkYnaEQVoLRyknIP5AgKZu+E/qJX+Oa4cF
+fv8KZwnjCBlAoEKDYpR300hKu2llkqgOd3dt2zXoauol0LfsLPDd3oGgpUfOIJep
+1VDeTyTcTWi+qFM771ZS+IPMwe77UWQN6I9trZHNAgMBAAGjZzBlMEQGA1UdEQQ9
+MDuCFmxpc3RzLm13YXRlbGVzY29wZS5vcmeGIWh0dHBzOi8vbGlzdHMubXdhdGVs
+ZXNjb3BlLm9yZy9zcDAdBgNVHQ4EFgQUW38Y+EwLMQJPsofCi11yKxf8LgcwDQYJ
+KoZIhvcNAQELBQADggGBAEFeIaElYhrutJil4v8BIJjcvDUzz3Krck0gwd37fpL8
+rjJNofIsxxbf6ztsGIfJT8QLmcT8xi9eorYPNXtYgzA96CoOJWnVaQpp5VHbrxBD
+qAH9xLegmYEFfy+5K5IXnfSXSAr+XVJW/4tuj/9kdiqUBaz4zllinow4/6O1kPkm
+OUZtYFVRpM6RQ1j2iqguC+UOxyfm5wymZrOGKk1RcAEOeB12fM3uxsLwjKjDCTcD
+mIRvVlmR/xL1zHYj+80ncNEq4eB/kzzLFonNhnnWnl/+yCHElWLgKjLtKoH9Ot6r
+igHxcXFxVnE8i8pIDXzDTvY2Ytsr7pcJtXgdJDZN7rOgw01CTVLuqCr7kxwBlmpH
+7oqSDCXGdgrn4eaDwgqIvjMgKaVXZKAxhcqsMcxkt+GaMv0ItfjWARgigeq0oX1w
+xmjLFlMAYw31kvkaUvG/lBG3oF0lYGwVnY7ZBXWCNtuKmq+prRb4O4HMJ2IfZ1TG
+KNbcCj8Fp3shco77e27kGw==
+                        </ds:X509Certificate>
+                    </ds:X509Data>
+                </ds:KeyInfo>
+            </KeyDescriptor>
+            <AssertionConsumerService
+                    Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                    Location="https://lists.mwatelescope.org/Shibboleth.sso/SAML2/POST"
+                    index="1"/>
+        </SPSSODescriptor>
+        <Organization>
+            <OrganizationName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationName>
+            <OrganizationDisplayName xml:lang="en">Murchison Widefield Array Telescope Project</OrganizationDisplayName>
+            <OrganizationURL xml:lang="en">http://www.mwatelescope.org</OrganizationURL>
+        </Organization>
+        <ContactPerson contactType="support">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="technical">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="other">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+        <ContactPerson contactType="administrative">
+          <GivenName>Greg</GivenName>
+          <SurName>Sleap</SurName>
+          <EmailAddress>mailto:greg.sleap@curtin.edu.au</EmailAddress>
+        </ContactPerson>
+    </EntityDescriptor>
+
 </EntitiesDescriptor>
