@@ -60,6 +60,11 @@
     <xsl:template match="/md:EntitiesDescriptor/md:EntityDescriptor[md:Extensions/mdrpi:RegistrationInfo/@registrationAuthority = 'https://aaf.edu.au']">
     </xsl:template>
 
+    <!-- Match all entities marked hide-from-discovery and take no action so they are
+         not copied into the output. -->
+    <xsl:template match="/md:EntitiesDescriptor/md:EntityDescriptor[md:Extensions/mdattr:EntityAttributes/saml:Attribute/saml:AttributeValue[text() = 'http://refeds.org/category/hide-from-discovery']]">
+    </xsl:template>
+
     <!-- Change name for UW-Milwaukee to work around parsing issue. -->
     <xsl:template match="/md:EntitiesDescriptor/md:EntityDescriptor[@entityID='https://idp.uwm.edu/idp/shibboleth']/md:IDPSSODescriptor/md:Extensions/mdui:UIInfo">
         <mdui:UIInfo>
