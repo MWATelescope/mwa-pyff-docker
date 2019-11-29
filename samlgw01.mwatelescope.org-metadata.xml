@@ -40,7 +40,7 @@ T9KKeP4IrX6xzi482lMpXm4Cnh6W+F5UzUdo4CerxuZNHA==
     </md:KeyDescriptor>
     <md:SingleSignOnService
             Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-            Location="https://samlgw01.mwatelescope.org/simplesaml/saml2/idp/SSOService.php"/>
+            Location="https://samlgw01.mwatelescope.org/orcid/sso/redirect"/>
   </md:IDPSSODescriptor>
   <md:Organization>
       <md:OrganizationName xml:lang="en">ORCID</md:OrganizationName>
