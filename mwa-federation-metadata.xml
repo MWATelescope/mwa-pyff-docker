@@ -226,13 +226,13 @@ EPH2
         </ContactPerson>
     </EntityDescriptor>
 
-    <!-- test-asvo.mwatelescope.org test  -->
-    <EntityDescriptor entityID="https://test-asvo.mwatelescope.org/sp">
+    <!-- dev-asvo.mwatelescope.org dev  -->
+    <EntityDescriptor entityID="https://dev-asvo.mwatelescope.org/sp">
         <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
             <Extensions>
                 <mdui:UIInfo>
-                    <mdui:DisplayName xml:lang="en">MWA Test ASVO Service Provider</mdui:DisplayName>
-                    <mdui:Description xml:lang="en">MWA Test ASVO Service Provider</mdui:Description>
+                    <mdui:DisplayName xml:lang="en">MWA Dev ASVO Service Provider</mdui:DisplayName>
+                    <mdui:Description xml:lang="en">MWA Dev ASVO Service Provider</mdui:Description>
                 </mdui:UIInfo>
             </Extensions>
             <KeyDescriptor>
@@ -268,7 +268,7 @@ EPH2
             </KeyDescriptor>
             <AssertionConsumerService
                     Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-                    Location="https://test-asvo.mwatelescope.org/acs"
+                    Location="https://dev-asvo.mwatelescope.org/acs"
                     index="1"/>
         </SPSSODescriptor>
         <Organization>
