@@ -370,7 +370,7 @@ KNbcCj8Fp3shco77e27kGw==
         </ContactPerson>
     </EntityDescriptor>
 
-    <-- wiki dev -->
+    <!-- wiki dev -->
     <EntityDescriptor entityID="https://dev-wiki.mwatelescope.org/shibboleth">
         <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
             <Extensions>
